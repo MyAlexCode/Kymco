@@ -1,0 +1,43 @@
+id|date|kmh|litres|litre_price|-->is my db field
+
+................
+INSERT INTO 'main'('id', 'date', 'kmh', 'litres', 'litre_price') VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]')
+
+2022-03-01
+3331.2
+0
+0
+...............
+restore two price id and id-1 for kmh name: currentkmh and lastkmh
+
+............................
+ΠΡΟΤΑΣΗ
+<?php
+$lastkmh=0;
+$Apostash=0;
+$currentkmh=0;
+$count=0;
+$myarray=[12,18,22,29,32,36,38];
+
+foreach($myarray as $value){
+$count++;
+$lastkmh=$currentkmh;
+$currentkmh=$value;
+$Apostash=$currentkmh-$lastkmh;
+if($count>1){
+print ($Apostash.'<br>');
+}
+}
+?>
+.....................
+
+
+
+Απόσταση|currentkmh-lastkmh
+κατανάλωση|litres/Απόσταση
+Ποσό πληρωμής|litres*litre_price
+
+sumliter=sumliter+litres->all row
+sumkmh=sumkmh+Απόσταση -- >all row
+summoney=summoney+Ποσό πληρωμής-- >all row
+
